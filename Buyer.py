@@ -15,7 +15,7 @@ api_secret = ""
 client = Client(api_key, api_secret)
 
 Symbol = "ETHUSDT" # Coin name with USDT 
-BuyAmount = 12 # in USDT
+BuyAmount = 36 # in USDT
 Type = "market" # The order will be in market price
 Side = "buy" # Buy Order
 
@@ -27,9 +27,9 @@ LaunchTime = Now.replace(hour = 19, # Launch date and time, suggested to keep 2 
                          microsecond = 0)
 while True: # Main loop, basically for time checking.
     Now = datetime.now() #Fetch the time continuously.
-        if Now > LaunchTime: # when time is greater the set time.
+    if Now > LaunchTime: # when time is greater the set time.
         while True: # Second loop to send the order command concurrently
-        print("Sending order at:", date.now())
+            print("Sending order at:", date.now())
             try:
                 order = client.create_order(symbol = Symbol, side = Side, type = Type, quoteOrderQty=BuyAmount) # Order command
             except BinanceAPIException as e: # To handle exception and keeping code from crashing

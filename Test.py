@@ -1,12 +1,10 @@
-from client import Client
+from binance.client import Client
 import datetime
 
 
 
-# Original Echange Api
-api_key = ""
-api_secret = ""
-
+api_key = "ZV4QxddoSR6HkzQYrLIWOlp0BeJIapHrIuYnCt5Z2rsD98YLp8dhuO8Icb05pvew"
+api_secret = "hWFfWYzB1FzSPzjvUSNN0g1Mw3vsK66Lq6tQlePy7fad7w7OozWLkPQYLPxwTmUP"
 
 client = Client(api_key, api_secret)
 sum_all = 0
